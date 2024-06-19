@@ -87,86 +87,16 @@ startAutoplay();
 // Detén el autoplay cuando el usuario interactúe con el carrusel (por ejemplo, al hacer clic en una diapositiva)
 carrusel.addEventListener('click', stopAutoplay);
 
+// MENU HAMBURGUESA
 
+const menu = document.querySelector("#menu");
+const openMenu = document.querySelector("#openMenu");
+const closeMenu = document.querySelector("#closeMenu");
 
-/*
-// Variables
-const SEGUNDOS_ENTRE_DIAPOSITIVAS = 3; // <---- IMPORTANTE
-const CAROUSEL = document.querySelector(".container__carrusel");
-const SLIDERS = CAROUSEL.querySelectorAll(".slider");
+openMenu.addEventListener("click", () => {
+    menu.classList.add("visible");
+})
 
-// Funciones
-
-async function autoPlay(posicionPartida = SLIDERS.length) {
-  // Obtiene el siguiente indice
-  const SIGUIENTE_POSICION =
-    SLIDERS.length - 1 > posicionPartida ? posicionPartida + 1 : 0;
-  // Mueve el scroll al siguiente slider
-  SLIDERS[SIGUIENTE_POSICION].scrollIntoView({ block: "center" });
-  // Retardo antes de volver a ejecutarse
-  await new Promise((res) => {
-    setTimeout(res, SEGUNDOS_ENTRE_DIAPOSITIVAS * 1000);
-  });
-  // Creamos un objeto IntersectionObserver
-  observerCarousel = new IntersectionObserver((entries) => {
-        // Comprobamos todas las intesecciones.
-        entries.forEach((entry) => {
-            // Si es observable, entra
-            if (entry.isIntersecting) {
-              // Activamos
-              autoPlay(SIGUIENTE_POSICION)
-            }
-        });
-    });
-
-  // Añado a mi Observable que quiero observar. En este caso el carousel
-  observerCarousel.observe(CAROUSEL);
-}
-
-// Ejecuta
-autoPlay();
-
-
-
-
-
-
-//codigo funcional
-/*
-let currentIndex = 0;
-
-const totalImages = document.querySelectorAll('.slider').length;
-
-document.querySelector('.button__navigation--less').addEventListener('click', () => {
-   navigate(-1);
-});
-
-document.querySelector('.button__navigation--more').addEventListener('click', () => {
-   navigate(1);
-});
-
-function navigate(direction) {
-   currentIndex = (currentIndex + direction + totalImages) % totalImages;
-   const offset = -currentIndex * 100;
-   const carrusel = document.querySelector('.carrusel');
-
-   carrusel.style.transform = `translateX(${offset}%)`;
-}
-
-let autoPlayInterval = null;
-
-function startAutoPlay(interval) {
-   stopAutoPlay(); // Detiene cualquier autoplay anterior para evitar múltiples intervalos.
-   autoPlayInterval = setInterval(() => {
-      navigate(1); // Navega a la siguiente imagen cada intervalo de tiempo.
-   }, interval);
-}
-
-function stopAutoPlay() {
-   clearInterval(autoPlayInterval);
-}
-
-// Iniciar autoplay con un intervalo de 3.5 segundos.
-startAutoPlay(3500);*/
-
-
+closeMenu.addEventListener("click", () => {
+    menu.classList.remove("visible");
+})

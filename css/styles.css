@@ -228,7 +228,7 @@ SECCION CARRUSEL
     transition: var(--transition);
 }
 .slider {
-    background-image: url(/img/fondo__banner.jpeg);
+    background-image: url(../img/fondo__banner.jpeg);
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;                                        

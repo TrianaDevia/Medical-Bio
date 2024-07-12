@@ -34,6 +34,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    max-width: 100%; 
 }
 /**************************************************
 SECCION REDES SOCIALES UBICACION
@@ -306,6 +307,7 @@ SECCION CARRUSEL
 .slider-container {
     display: flex;
     position: relative;
+    
 }
 
 .slider {
@@ -316,6 +318,7 @@ SECCION CARRUSEL
     box-sizing: border-box;
     position: relative;
     display: flex;
+    overflow-x: hidden;
 }
 @media (max-width: 600px) {
     .slider {

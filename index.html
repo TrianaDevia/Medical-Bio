@@ -29,73 +29,109 @@
 <body>
     <section class="social__media">
         <div class="social__media--maps">
-            <a href="https://www.google.com/maps/place/Av.+Espa%C3%B1a+512,+M5500+Mendoza/@-32.8960755,-68.8462878,17z/data=!3m1!4b1!4m6!3m5!1s0x967e0911a7fd1363:0x386f8a2effcfe048!8m2!3d-32.89608!4d-68.8437129!16s%2Fg%2F11csg8_ds_?entry=ttu" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
-            <p>España 512, Mendoza</p>
+            <a href="https://www.google.com/maps/place/Av.+Espa%C3%B1a+512,+M5500+Mendoza/@-32.8960755,-68.8462878,17z/data=!3m1!4b1!4m6!3m5!1s0x967e0911a7fd1363:0x386f8a2effcfe048!8m2!3d-32.89608!4d-68.8437129!16s%2Fg%2F11csg8_ds_?entry=ttu"
+                target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+            <p>España 512, 4º 4ª, Mendoza</p>
         </div>
         <div class="social__media--instagram">
-            <a href="https://www.instagram.com/clinica.medicalbio.estetica/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="mailto:medicalbio24@gmail.com?subject=Info"><i class="fa-solid fa-square-envelope"></i></a>
-            <a href="tel:+542613372788"><i class="fa-solid fa-square-phone"></i></a>
+            <a href="https://www.instagram.com/clinica.medicalbio.estetica/" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:medicalbio24@gmail.com?subject=Info"><i class="fa-solid fa-at"></i></a>
+            <a href="tel:+542613372788"><i class="fa-solid fa-mobile-screen-button"></i></a>
         </div>
     </section>
     <header class="header__logo">
         <div class="logo">
-            <a href="index.html"><img class="imgLogo" src="img/logo_carrusel.png" alt=""></a>
+            <a href="index.html"><img class="imgLogo" src="img/logo.png" alt=""></a>
         </div>
         <button class="openMenu" id="openMenu"><i class="fa-solid fa-bars"></i></button>
         <nav class="menu" id="menu">
             <button class="closeMenu" id="closeMenu"><i class="fa-solid fa-x"></i></button>
-                <ul class="menu__list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Servicios</a></li>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
+            <ul class="menu__list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
         </nav>
     </header>
-        <!--Carrusel-->
-        <section class="container__carrusel" id="container__carrusel">
-            <div class="carrusel" id="carrusel">
-                <div class="slider" id="slider">
-                    <div class="slider__text">
-                        <h1 class="title">Medicina Estética <br><span>en Mendoza</span></h1>
-                        <h2 class="name">Medical Bio</h2>
-                        <h3 class="slogan">Estética y Vanguardia</h3>
-                    </div>
-                    <div class="slider__img">
-                        <img class="slider__img--img" src="img/slider1.png" alt="">
-                    </div>
-                </div>
-                <div class="slider">
-                    <div class="slider__text">
-                        <h3 class="title">Tus aliados para una <span>piel rejuvenecida</span></h3>
-                        <h2 class="name">rellenos faciales</h2>
-                        <h3 class="slogan">juventud sin cirugía</h3>
-                        <div class="slider__img">
-                            <img class="slider__img--img" src="img/slider2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="slider">
-                    <div class="slider__text">
-                        <h3 class="title">Tu escudo contra el <span>envejecimiento prematuro</span></h3>
-                        <h2 class="name">botox</h2>
-                        <h3 class="slogan">piel radiante y atractiva</h3>
-                    </div>
-                    <div class="slider__img">
-                        <img class="slider__img--img img3" src="img/slider3.png" alt="">
-                    </div>
-                </div>
+    <!--Carrusel-->
+    <div class="slider-container">
+        <div class="slider slider1">
+            <div class="slider__text">
+                <h1 class="title">Medicina Estética <br><span>en Mendoza</span></h1>
+                <h2 class="name">Medical Bio</h2>
+                <h3 class="slogan">Estética y Vanguardia</h3>
             </div>
-            <div class="carrusel__navigation">
-                <button class="button__navigation--less" id="button__navigation--less"><i class="fa-solid fa-angle-left"></i></button>
-                <button class="button__navigation--more" id="button__navigation--more"><i class="fa-solid fa-angle-right"></i></button>
+            <div class="slider__img">
+                <img src="img/slider1.png" alt="">
             </div>
-            <button class="icon__whatsapp">
-                <i class="fa-brands fa-whatsapp"></i>
-            </button>
-        </section>
-        <section class="cualca"></section>
+    
+            <div class="bullets">
+                <button onclick="goToSlide(0)"></button>
+                <button onclick="goToSlide(1)"></button>
+                <button onclick="goToSlide(2)"></button>
+                <button onclick="goToSlide(3)"></button>
+            </div>
+        </div>
+        <div class="slider slider2">
+            <div class="slider__text">
+                <h3 class="title">Tus aliados para una <span>piel rejuvenecida</span></h3>
+                <h2 class="name">rellenos faciales</h2>
+                <h3 class="slogan">Juventud sin cirugía</h3>
+            </div>
+            <div class="slider__img">
+                <img src="img/slider2.png" alt="">
+            </div>
+            
+            <div class="bullets">
+                <button onclick="goToSlide(0)"></button>
+                <button onclick="goToSlide(1)"></button>
+                <button onclick="goToSlide(2)"></button>
+                <button onclick="goToSlide(3)"></button>
+            </div>
+        </div>
+        <div class="slider slider3">
+            <div class="slider__text">
+                <h3 class="title">Tu escudo contra el <span>envejecimiento prematuro</span></h3>
+                <h2 class="name">botox</h2>
+                <h3 class="slogan">Piel radiante y atractiva</h3>
+            </div>
+            <div class="slider__img">
+                <img src="img/slider3.png" alt="">
+            </div>
+            
+            <div class="bullets">
+                <button onclick="goToSlide(0)"></button>
+                <button onclick="goToSlide(1)"></button>
+                <button onclick="goToSlide(2)"></button>
+                <button onclick="goToSlide(3)"></button>
+            </div>
+        </div>
+        <div class="slider slider4">
+            <div class="slider__text">
+                <h3 class="title">Tu secreto para <span>redefinir tus rasgos</span></h3>
+                <h2 class="name">armonización facial</h2>
+                <h3 class="slogan">Belleza natural</h3>
+            </div>
+            <div class="slider__img">
+                <img src="img/slider4.png" alt="">
+            </div>
+            
+            <div class="bullets">
+                <button onclick="goToSlide(0)"></button>
+                <button onclick="goToSlide(1)"></button>
+                <button onclick="goToSlide(2)"></button>
+                <button onclick="goToSlide(3)"></button>
+            </div>
+        </div>
+    </div>
+    
+    <button class="icon__whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+    </div>
+    <section class="cualca"></section>
     <script src="https://kit.fontawesome.com/27868a80f3.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>

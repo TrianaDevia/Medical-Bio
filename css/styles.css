@@ -34,7 +34,13 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    max-width: 100%; 
+    box-sizing: border-box; 
+    max-width: 100%;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 /**************************************************
 SECCION REDES SOCIALES UBICACION
@@ -305,27 +311,38 @@ SECCION LOGO Y MENU
 SECCION CARRUSEL
 **************************************************/
 .slider-container {
-    display: flex;
     position: relative;
-    
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+@media (max-width: 600px) {
+    .slider-container {
+        height: 500px;
+    }
+}
+@media (min-width: 600px) and (max-width:768px) {
+    .slider-container {
+        height: 450px;
+    }
+}
+.sliders {
+    width: 400%;
+    height: 100%;
+    display: flex;
 }
 
 .slider {
-    flex: 1;
-    min-width: 100%;
-    transition: transform 0.5s ease;                                   
-    height: 400px;
-    box-sizing: border-box;
+    width: calc(100% / 4);                                  
+    height: 100%;
     position: relative;
     display: flex;
-    overflow-x: hidden;
+    
 }
 @media (max-width: 600px) {
     .slider {
-        height: 500px;
         flex-direction: column-reverse;
     }
-  
 }
 .slider__text {
     display: flex;
@@ -337,6 +354,7 @@ SECCION CARRUSEL
     font-family: var(--montserrat);
     background-color:var(--secundario);
     margin: 0;
+    gap: 1rem;
 }
     /*animacion*/
     /*opacity: 0;
@@ -347,8 +365,6 @@ SECCION CARRUSEL
     opacity: 1;
     transform: translateY(0);
 }*/
-
-
 @media (max-width: 600px) {
     .slider__text {
         display: flex;
@@ -365,8 +381,36 @@ SECCION CARRUSEL
 @media (min-width:600px) and (max-width: 768px) {
     .slider__text {
         width: 50%;
-        height: 300px;
         gap: 1rem;
+    }
+}
+.slider__img {
+    height: 400px;
+}
+@media (max-width: 600px) {
+    .slider__img {
+        height: 300px;
+        width: 100%;
+    }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+    .slider__img {
+        width: 60%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .slider__img {
+        width: 60%;
+    }
+}
+.slider__img img {
+    height: 100%;
+    width: 100%;  
+}
+@media (max-width: 600px) {
+    .slider__img img {
+        height: 100%;
+        width: 100%;  
     }
 }
 .title {
@@ -446,7 +490,7 @@ SECCION CARRUSEL
 @media (max-width: 600px) {
     .slogan {
         font-size: 2rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         margin: 0;
     }
 }
@@ -461,8 +505,61 @@ SECCION CARRUSEL
         font-size: 2.2rem;
     }
 }
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+@media (min-width: 600px) and (max-width: 780px) {
+    .btn-left,
+    .btn-right {
+        bottom: 50px;
+    }
+  
+}
+.btn-left:hover,
+.btn-right:hover {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
 
-.bullets {
+.btn-left {
+    left: 10px;
+}
+@media (max-width: 600px) {
+    .btn-left {
+        left: 42%;
+        bottom: 50%;
+    }
+}
+
+.btn-right {
+    right: 10px;
+}
+@media (max-width: 600px) {
+    .btn-right {
+        right: 42%;
+        bottom: 50%;
+    }
+}
+/*.bullets {
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -491,37 +588,6 @@ SECCION CARRUSEL
     background-color: #dfc3b8;
 }
 
-.slider__img {
-    height: 400px;
-    width: 60%;
-}
-@media (max-width: 600px) {
-    .slider__img {
-        height: 300px;
-        width: 100%;
-    }
-}
-@media (min-width: 600px) and (max-width: 768px) {
-    .slider__img {
-        height: 300px;
-        width: 60%;
-    }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-    .slider__img {
-        width: 60%;
-    }
-}
-.slider__img img {
-    height: 100%;
-    width: 100%;  
-}
-@media (max-width: 600px) {
-    .slider__img img {
-        height: 100%;
-        width: 100%;  
-    }
-}
 /*ICONO WHATSAPP*/
 .icon__whatsapp {
     color: var(--whatsapp);

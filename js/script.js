@@ -1,5 +1,53 @@
+const btnLeft = document.querySelector(".btn-left"),
+      btnRight = document.querySelector(".btn-right"),
+      slider = document.querySelector("#sliders"),
+      sliderSection = document.querySelectorAll(".slider");
+
+
+btnLeft.addEventListener("click", e => moveToLeft())
+btnRight.addEventListener("click", e => moveToRight())
+
+setInterval(() => {
+    moveToRight()
+}, 5000);
+
+
+let operacion = 0,
+    counter = 0,
+    widthImg = 100 / sliderSection.length;
+
+function moveToRight() {
+    if (counter >= sliderSection.length-1) {
+        counter = 0;
+        operacion = 0;
+        slider.style.transform = `translate(-${operacion}%)`;
+        slider.style.transition = "none";
+        return;
+    } 
+    counter++;
+    operacion = operacion + widthImg;
+    slider.style.transform = `translate(-${operacion}%)`;
+    slider.style.transition = "all ease .6s"
+    
+}  
+
+function moveToLeft() {
+    counter--;
+    if (counter < 0 ) {
+        counter = sliderSection.length-1;
+        operacion = widthImg * (sliderSection.length-1)
+        slider.style.transform = `translate(-${operacion}%)`;
+        slider.style.transition = "none";
+        return;
+    } 
+    operacion = operacion - widthImg;
+    slider.style.transform = `translate(-${operacion}%)`;
+    slider.style.transition = "all ease .6s"
+    
+    
+}   
 //CARRUSEL
-const sliders = document.querySelectorAll('.slider');
+/*const sliders = document.querySelectorAll('.slider');
 let currentIndex = 0;
 
 function goToSlide(index) {
@@ -13,7 +61,7 @@ function goToSlide(index) {
 
 function updateSliderPosition() {
   const translateX = -currentIndex * 100;
-  document.querySelector('.slider-container').style.transform = `translateX(${translateX}%)`;
+  document.querySelector('.sliders').style.transform = `translateX(${translateX}%)`;
 }
 
 setInterval(moveToNextSlide, 5000);
@@ -21,7 +69,7 @@ setInterval(moveToNextSlide, 5000);
 function moveToNextSlide() {
   currentIndex = (currentIndex + 1) % sliders.length;
   updateSliderPosition();
-}
+}*/
 
 //ANIMACION DE TEXTO BANNER
 

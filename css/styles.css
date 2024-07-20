@@ -34,9 +34,7 @@ body {
     box-sizing: border-box; 
     max-width: 100%;
 }
-* {
-    border: 2px solid red;
-}
+
 
 /**************************************************
 SECCION REDES SOCIALES UBICACION
@@ -807,6 +805,7 @@ SECCION CARRUSEL
     display: flex;
     width: 100%;
     justify-content: space-around;
+    overflow: hidden;
 }
 @media (max-width: 600px) {
     .cards {
@@ -833,6 +832,7 @@ SECCION CARRUSEL
     position: relative;
     box-shadow: 5px 5px 5px var(--grisClaro);
     margin: 2rem;
+    overflow: hidden;
   }
   
   .card__container .white__shape {
@@ -847,25 +847,13 @@ SECCION CARRUSEL
     grid-template-areas: 
       'clr group'
       'clr .....';
-    transition:
-      grid-template-columns .6s linear,
-      grid-template-rows .6s linear;
   }
   .card__container .white__shape .grey__shape {
     grid-area: clr;
     background: var(--secundario);
   }
-  .card__container .white__shape .pink__shape {
-    font: 10px/10px var(--mono);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    writing-mode: vertical-lr;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  
   .card__container .card__image {
-    transition: 0.5s;
     width: 220px;
     height: 380px;
     position: absolute;
@@ -911,7 +899,6 @@ SECCION CARRUSEL
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.5 ease;
 
   }
   .card__container a.card__button:hover {

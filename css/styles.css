@@ -5,6 +5,7 @@
     --primarioClaro: #fef6f1;
     --secundario: #333333;
     --grisClaro: #b2b1ac;
+    --grisMuyClaro: #fafafa;
 /*FUENTES*/
     --cursiva: "Sacramento", cursive;
     --roboto: "Roboto", sans-serif;
@@ -163,9 +164,33 @@ SECCION REDES SOCIALES UBICACION
 SECCION LOGO Y MENU
 **************************************************/
 .header__logo {
+    width: 100%;
+    height: 60px;
     background-color: white;
     display: flex;
     justify-content:space-around;
+    position: fixed;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+}
+header.abajo {
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    /* From https://css.glass */
+/*background: rgba(51, 51, 51, 0.84);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.2px);
+-webkit-backdrop-filter: blur(1.2px);
+border: 1px solid rgba(51, 51, 51, 0.3);*/
+    /* From https://css.glass */
+/*background: rgba(255, 255, 255, 0.38);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.9px);
+-webkit-backdrop-filter: blur(4.9px);
+border: 1px solid rgba(255, 255, 255, 0.3);*/
+    
+
+
 }
 .logo {
     display: flex;
@@ -227,6 +252,7 @@ SECCION LOGO Y MENU
     display: block;
     z-index: -1;
     background: var(--primario);
+    border-radius: 4px;
     width: 0;
     height: 5px;
     bottom: -10px;
@@ -300,7 +326,7 @@ SECCION LOGO Y MENU
         color: #ecececec;
 }
 }
-/**************************************************
+/*************************************************
 SECCION CARRUSEL
 **************************************************/
 .slider-container {
@@ -308,6 +334,8 @@ SECCION CARRUSEL
     width: 100%;
     height: 400px;
     overflow: hidden;
+    margin-top: 6rem;
+    
 }
 @media (max-width: 600px) {
     .slider-container {
@@ -647,7 +675,7 @@ SECCION CARRUSEL
               transform: scale3d(1, 1, 1);
     }
   }
-/**************************************************SECCION HOME
+/*************************************************SECCION HOME
 **************************************************/
 .home h2 {
     font-family: var(--montserrat);
@@ -715,20 +743,17 @@ SECCION CARRUSEL
 .home__text span {
     color: var(--primarioOscuro);
 }
-
-/*.home__img {
+.home__media {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-.home__img img {
-    width: 350px;
-    height: 300px;
-    padding: 1rem;
-    border-radius: 16px;
-}*/
+
 .container__video {
     width: 50%;
+    
+    top: 150px;
+    left: 300px;
 }
 @media (max-width: 600px) {
     .container__video {
@@ -751,36 +776,30 @@ SECCION CARRUSEL
 .home__button {
     cursor: pointer;
     border: none;
-    background-color: white;
-    color: var(--primarioOscuro);
-    padding: 1rem;
-    width: 20%;
+    background-color: var(--primarioOscuro);
+    color: var(--secundario);
+    padding: 1rem 2rem;
     margin-top: 2rem;
     border: 2px solid var(--primarioOscuro);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     box-shadow: 5px 5px 5px var(--primario);
-    border-radius: 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
 }
 @media (max-width: 600px) {
   .home__button {
-    font-size: 1.4rem;
-    width: 50%;
+    font-size: 1.4rem; 
   }
 }
-@media (min-width: 600px) and (max-width: 780px) {
-    .home__button {
-        width: 30%;
-    }
-}
+
 .home__button:hover {
-    
+    background-color: white;
+    border: 2px solid var(--primarioOscuro);
+    color: var(--primarioOscuro);
 }
-.svg {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
+
 /**************************************************SERVICIOS
 **************************************************/
 .services h2 {
@@ -808,9 +827,11 @@ SECCION CARRUSEL
 .container__cards {
     background-color: #fafafa;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     padding: 3rem 2rem;
+    flex-wrap: wrap;
+    gap: 5rem;
 }
 @media (max-width: 600px) {
     .container__cards {
@@ -831,11 +852,12 @@ SECCION CARRUSEL
     .card {
         width: 100%;
         height: 400px;
+        padding: 3rem;
     }
   
 }
 .card__img {
-    width: 250px;
+    width: 260px;
     height: 200px;
 }
 @media (max-width: 600px) {
@@ -843,6 +865,12 @@ SECCION CARRUSEL
         width: 100%;
         height: 150px;
     }
+}
+@media (min-width: 600px) and (max-width:768px) {
+    .card__img {
+        width: 100%;
+    }
+  
 }
 .card__img img {
     width: 100%;
@@ -877,40 +905,45 @@ SECCION CARRUSEL
     .card__text h3 {
         font-size: 1.8rem;
     }
-  
 }
 .card__text p {
     position: absolute;
-    top: 100px;
+    top: 80px;
     font-size: 1.2rem;
 }
-@media (max-width: 600px) {
+
+@media (min-width: 600px) and (max-width: 768px) {
     .card__text p {
         position: absolute;
-        top: 80px;
-    }  
+        top: 70px;
+    } 
 }
 .card__button {
-    border: none;
-    background-color: white;
+    background-color: var(--primarioOscuro);
     border: 2px solid var(--primarioOscuro);
-    padding: 1rem;
-    color: var(--primarioOscuro);
+    padding: 1rem 2rem;
+    color: var(--secundario);
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1.1rem;
-    border-radius: 8px;
+    font-size: 1.2rem;
+    border-radius: 20px;
     position: absolute;
     top: 150px;
     box-shadow: 5px 5px 5px var(--primario);
     cursor: pointer;
+    transition: 0.5s ease;
 }
 @media (max-width: 600px) {
     .card__button {
         top: 160px;
     }
-  
 }
+.card__button:hover {
+    border: 2px solid var(--primarioOscuro);
+    color: var(--primarioOscuro);
+    background-color: white;
+}
+
 /**************************************************SECCION NOSOTROS
 **************************************************/
 .nosotros h2 {
@@ -939,7 +972,9 @@ SECCION CARRUSEL
 }
 .nosotros__text {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: space-evenly;
     padding: 4rem 2rem; 
     background-color: var(--primarioClaro);
     background-image: url(../img/fondo-nosotros.png);
@@ -953,7 +988,6 @@ SECCION CARRUSEL
         flex-direction: column;
         gap: 3rem;
     }
-  
 }
 .nosotros__card {
     width: 350px;
@@ -963,12 +997,12 @@ SECCION CARRUSEL
     color: var(--secundario);
     
     /* From https://css.glass */
-background: rgba(255, 255, 255, 0.08);
+background: rgba(255, 255, 255, 0.21);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(1.5px);
--webkit-backdrop-filter: blur(1.5px);
-border: 1px solid rgba(255, 255, 255, 0.21);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 @media (max-width: 600px) {
     .nosotros__card {
@@ -987,18 +1021,24 @@ border: 1px solid rgba(255, 255, 255, 0.21);
         font-size: 1.4rem;
     } 
 }
-
 .nosotros__presentation {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 4rem;
     align-items: center;
+    gap: 3rem;
 }
 @media (max-width: 600px) {
     .nosotros__presentation {
         display: block;
         padding: 2rem;
+    }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+    .nosotros__presentation {
+        display: block;
+        padding: 3rem;
     }
 }
 .nosotros__presentation--text {
@@ -1009,12 +1049,11 @@ border: 1px solid rgba(255, 255, 255, 0.21);
     flex-direction: column;
     gap: 2rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .nosotros__presentation--text {
         width: 100%;
         gap: 1rem;
     }
-  
 }
 .nosotros__presentation--text h3 {
     font-size: 2rem;
@@ -1042,13 +1081,199 @@ border: 1px solid rgba(255, 255, 255, 0.21);
     width: 300px;
     height: auto;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .nosotros__img img {
-        width: 250px;
-        height: auto;
-        
+        width: 100%;
+        height: 350px; 
+        object-fit: cover;  
+    }
+}
+/*.nosotros__svg  {
+    width: 100%;
+    position: absolute;
+    bottom: 0;  
+}
+@media (max-width: 600px) {
+    .nosotros__svg  {
+        display: none;  
+    }
+}*/
+.form__title h2 {
+    font-family: var(--montserrat);
+    font-size: 2.5rem;
+    margin: 3rem;
+    text-align: center;
+    line-height: 4rem;
+}
+@media (max-width: 600px) {
+    .form__title h2 {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 600px) and (max-width:768px) {
+    .form__title h2 {
+        font-size: 2.2rem;
+    }
+}
+.form__title h2 span {
+    font-family: var(--cursiva);
+    color: var(--primarioOscuro);
+}
+.form__container {
+    background-image: url('../img/img-form.png');
+    width: 100%;
+    height: 500px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 600px) {
+    .form__container {
+        background-position: center;
     }
   
 }
+.form__container--glass {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.22);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.2px);
+-webkit-backdrop-filter: blur(3.2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 500px;
+    padding: 5rem;
+}
+@media (max-width: 600px) {
+    .form__container--glass {
+        padding: 2rem;
+        background: none;
+        box-shadow:none;
+        backdrop-filter:none;
+        border: none;
+        border-radius: 8px;
+    }
+}
+@media (min-width: 600px) and (max-width:768px) {
+    .form__container--glass {
+        padding: 3rem;
+    }
+}
+.form__flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+@media (max-width: 600px) {
+    .form__flex {
+        flex-direction: column;
+        border-radius: none;
+    }
+}
+.form__flex--img {
+    width: 50%;
+    height: 100%;
+}
+@media (max-width: 600px) {
+    .form__flex--img {
+        display: none;
+    }
+}
+.form__flex--img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+}
+@media (max-width: 600px) {
+    .form__flex--img img {
+        border-radius: none;
+    }
+  
+}
+
+.form__flex--card {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.52);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.6px);
+-webkit-backdrop-filter: blur(8.6px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 50%;
+    height: 100%;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media (max-width: 600px) {
+    .form__flex--card {
+        width: 100%;
+        /* From https://css.glass */
+background: rgba(255, 255, 255, 0.1);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.2px);
+-webkit-backdrop-filter: blur(2.2px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 8px;
+    }
+}
+
+.form__flex--card h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+    margin: 0;
+    color: var(--secundario);
+}
+.form__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 300px;
+    height: 100%;
+}
+@media (min-width: 600px) and (max-width:768px) {
+    .form__inputs {
+        width: 200px;
+    }
+}
+.form-input  {
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    font-family: var(--montserrat);
+    border-radius: 8px;
+    outline-color: var(--grisClaro);
+}
+@media (max-width: 600px) {
+    .form-input {
+        width: 70%;
+        /* From https://css.glass */
+background: rgba(255, 255, 255, 0.74);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.1px);
+-webkit-backdrop-filter: blur(10.1px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  
+}
+.btn-form {
+    cursor: pointer;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: var(--primarioOscuro);
+    border-radius: 20px;
+    font-weight: 700;
+    transition: 0.5s ease;
+    box-shadow: 5px 5px 5px var(--primario);
+}
+
+   
   
 

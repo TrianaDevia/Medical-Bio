@@ -46,32 +46,6 @@ function moveToLeft() {
     
     
 }   
-//CARRUSEL
-/*const sliders = document.querySelectorAll('.slider');
-let currentIndex = 0;
-
-function goToSlide(index) {
-  currentIndex = index;
-  updateSliderPosition();
-  const slides = document.querySelectorAll('.slider__text');
-    slides.forEach((slider__text, i) => {
-        slider__text.classList.toggle('active', i === currentIndex);
-      });
-}
-
-function updateSliderPosition() {
-  const translateX = -currentIndex * 100;
-  document.querySelector('.sliders').style.transform = `translateX(${translateX}%)`;
-}
-
-setInterval(moveToNextSlide, 5000);
-
-function moveToNextSlide() {
-  currentIndex = (currentIndex + 1) % sliders.length;
-  updateSliderPosition();
-}*/
-
-//ANIMACION DE TEXTO BANNER
 
 
 // MENU HAMBURGUESA
@@ -86,4 +60,11 @@ openMenu.addEventListener("click", () => {
 
 closeMenu.addEventListener("click", () => {
     menu.classList.remove("visible");
+})
+
+//HEADER SCROLL
+
+window.addEventListener("scroll", function() {
+    let header = document.querySelector("header");
+    header.classList.toggle("abajo", window.scrollY>0)
 })

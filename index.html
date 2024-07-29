@@ -24,6 +24,12 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
+    <!--EMAIL JS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('kgMTxNuZcVe41ZFZ0')
+    </script>
 </head>
 
 <body>
@@ -48,70 +54,72 @@
         <nav class="menu" id="menu">
             <button class="closeMenu" id="closeMenu"><i class="fa-solid fa-x"></i></button>
             <ul class="menu__list">
-                <li><a href="">Home</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <!--Carrusel-->
-    <div class="slider-container">
-        <div class="sliders" id="sliders">
-            <div class="slider slider1">
-                <div class="slider__text">
-                    <h1 class="title">Medicina Estética <br><span>en Mendoza</span></h1>
-                    <h2 class="name">Medical Bio</h2>
-                    <h3 class="slogan">Estética y Vanguardia</h3>
+    <section class="home" id="home">
+        <div class="slider-container">
+            <div class="sliders" id="sliders">
+                <div class="slider slider1">
+                    <div class="slider__text">
+                        <h1 class="title">Medicina Estética <br><span>en Mendoza</span></h1>
+                        <h2 class="name">Medical Bio</h2>
+                        <h3 class="slogan">Estética y Vanguardia</h3>
+                    </div>
+                    <div class="slider__img">
+                        <img src="img/slider1.png" alt="">
+                    </div>
                 </div>
-                <div class="slider__img">
-                    <img src="img/slider1.png" alt="">
+                <div class="slider slider2">
+                    <div class="slider__text">
+                        <h3 class="title">Tus aliados para una <span>piel rejuvenecida</span></h3>
+                        <h2 class="name">rellenos faciales</h2>
+                        <h3 class="slogan">Juventud sin cirugía</h3>
+                    </div>
+                    <div class="slider__img">
+                        <img src="img/slider2.png" alt="">
+                    </div>
+                </div>
+                <div class="slider slider3">
+                    <div class="slider__text">
+                        <h3 class="title">Tu escudo contra el <span>envejecimiento prematuro</span></h3>
+                        <h2 class="name">botox</h2>
+                        <h3 class="slogan">Piel radiante y atractiva</h3>
+                    </div>
+                    <div class="slider__img">
+                        <img src="img/slider3.png" alt="">
+                    </div>
+                </div>
+                <div class="slider slider4">
+                    <div class="slider__text">
+                        <h3 class="title">Tu secreto para <span>redefinir tus rasgos</span></h3>
+                        <h2 class="name">armonización facial</h2>
+                        <h3 class="slogan">Belleza natural</h3>
+                    </div>
+                    <div class="slider__img">
+                        <img src="img/slider4.png" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="slider slider2">
-                <div class="slider__text">
-                    <h3 class="title">Tus aliados para una <span>piel rejuvenecida</span></h3>
-                    <h2 class="name">rellenos faciales</h2>
-                    <h3 class="slogan">Juventud sin cirugía</h3>
-                </div>
-                <div class="slider__img">
-                    <img src="img/slider2.png" alt="">
-                </div>
-            </div>
-            <div class="slider slider3">
-                <div class="slider__text">
-                    <h3 class="title">Tu escudo contra el <span>envejecimiento prematuro</span></h3>
-                    <h2 class="name">botox</h2>
-                    <h3 class="slogan">Piel radiante y atractiva</h3>
-                </div>
-                <div class="slider__img">
-                    <img src="img/slider3.png" alt="">
-                </div>
-            </div>
-            <div class="slider slider4">
-                <div class="slider__text">
-                    <h3 class="title">Tu secreto para <span>redefinir tus rasgos</span></h3>
-                    <h2 class="name">armonización facial</h2>
-                    <h3 class="slogan">Belleza natural</h3>
-                </div>
-                <div class="slider__img">
-                    <img src="img/slider4.png" alt="">
-                </div>
-            </div>
+            <div class="btn-left"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="btn-right"><i class="fa-solid fa-arrow-right"></i></i></div>
         </div>
-        <div class="btn-left"><i class="fa-solid fa-arrow-left"></i></div>
-        <div class="btn-right"><i class="fa-solid fa-arrow-right"></i></i></div>
-    </div>
 
-    <a class="icon__whatsapp" href="https://api.whatsapp.com/send?phone=5492613372788&text=Hola%20!%20Te%20asesoramos%20por
+        <a class="icon__whatsapp" href="https://api.whatsapp.com/send?phone=5492613372788&text=Hola%20!%20Te%20asesoramos%20por
     %20whatsapp,%20gestiona%20tu%20turno%20por%20este%20canal.%20MEDICAL%20BIO" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    </div>
-    <section class="home">
-        <h2>Bienvenidos a Medical Bio: <br>Donde la <span>Belleza Natural</span> se encuentra con la
-            <span>Vanguardia</span>
-        </h2>
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        </div>
+        <div class="home__title">
+            <h2>Bienvenidos a Medical Bio: <br>Donde la <span>Belleza Natural</span> se encuentra con la
+                <span>Vanguardia</span>
+            </h2>
+        </div>
         <div class="home__container">
             <div class="home__text">
                 <p>En Medical Bio, nuestra pasión es realzar la belleza natural de nuestros pacientes. Ubicados en la
@@ -147,7 +155,7 @@
         </div>
 
     </section>
-    <section class="services">
+    <section class="services" id="servicios">
         <h2>Transforma tu apariencia y potencia tu confianza<br> con <span>Nuestros Tratamientos</span></h2>
         <div class="container__cards">
             <div class="card">
@@ -182,17 +190,17 @@
             </div>
         </div>
     </section>
-    <section class="nosotros">
+    <section class="nosotros" id="nosotros">
         <h2>Confía en <span>Nosotros</span> para realzar tu belleza</h2>
         <div class="container__nosotros">
             <div class="nosotros__text">
-                <div class="nosotros__card">
+                <div class="nosotros__card1">
                     <h3>Sobre Nosotros</h3>
                     <p>Bienvenidos a Medical Bio, el lugar donde la belleza natural y la vanguardia se encuentran en
                         perfecta armonía. Ubicados en la hermosa Ciudad de Mendoza, somos un consultorio dirigido
                         personalmente por la Dra. Sabrina Alessini.</p>
                 </div>
-                <div class="nosotros__card">
+                <div class="nosotros__card2">
                     <h3>Nuestra Visión</h3>
                     <p>En Medical Bio, creemos que la belleza verdadera es aquella que resalta la autenticidad de cada
                         persona. Nuestra visión es simple pero poderosa: realzar lo que ya existe en ti. No se trata
@@ -201,7 +209,7 @@
                         propia
                         piel.</p>
                 </div>
-                <div class="nosotros__card">
+                <div class="nosotros__card3">
                     <h3>Un Espacio Acogedor</h3>
                     <p>Nuestro consultorio es más que cuatro paredes. Es un espacio donde te sentirás como en casa desde
                         el
@@ -250,7 +258,7 @@
             </div>-->
         </div>
     </section>
-    <section class="form">
+    <section class="form" id="contacto">
         <div class="form__title">
             <h2>¿Lista para descubrir tu mejor versión? <br> <span>Contáctanos</span> y comencemos este viaje juntos
             </h2>
@@ -263,29 +271,88 @@
                     </div>
                     <div class="form__flex--card">
                         <h3>Contáctanos</h3>
-                        <form action="">
+                        <form id="form">
                             <div class="form__inputs">
-                                <input type="text" class="form-input" id="name" placeholder="Nombre" name="name"
-                                    value="" required>
-                                <input type="text" class="form-input" id="name" placeholder="Apellido" name="name"
-                                    value="" required>
-                                <input type="email" class="form-input" id="email" placeholder="Email" name="email"
-                                    value="" required>
-                                <textarea class="form-input" rows="10" placeholder="Mensaje" name="message"
-                                    required></textarea>
-                                <button class="btn-form" id="submit" type="submit"
-                                    value="SEND">ENVIAR</button>
-                            </div>
+                                <input type="text" name="from_name" id="from_name" class="form-input"
+                                    placeholder="Nombre y Apellido" value="" required>
 
+                                <input type="text" name="email_id" id="email_id" class="form-input" placeholder="Email"
+                                    value="" required>
+
+                                <textarea name="message" id="message" class="form-input" rows="10" placeholder="Mensaje"
+                                    value="" required></textarea>
+
+                                <input type="submit" id="button" class="btn-form" value="ENVIAR">
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
 
         </div>
+        <!--<div class="form__container">
+            <div class="form__container--glass">
+                <div class="form__flex">
+                    <div class="form__flex--img">
+                        <img src="img/img-form.png" alt="">
+                    </div>
+                    <div class="form__flex--card">
+                        <h3>Contáctanos</h3>
+                        <form id="form" action="" class="form">
+                            <div class="form__inputs">
+                                <input type="text" class="form-input" id="name" placeholder="Nombre" name="nombre"
+                                    value="" required>
+                                <input type="text" class="form-input" id="name" placeholder="Apellido" name="apellido"
+                                    value="" required>
+                                <input type="email" class="form-input" id="email" placeholder="Email" name="email"
+                                    value="" required>
+                                <textarea class="form-input" rows="10" placeholder="Mensaje" name="mensaje"
+                                    required></textarea>
+                                <button class="btn-form" id="submit" type="submit"
+                                    value="SEND">ENVIAR</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
     </section>
-    <script src="https://kit.fontawesome.com/27868a80f3.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <section class="footer">
+        <div class="footer__separador"></div>
+        <div class="container__footer">
+            <div class="footer__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.0791520415446!2d-68.84628782568255!3d-32.89607546933378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09004f5aaf59%3A0x18105b4cd69c4271!2sMedicaL%20Bio!5e0!3m2!1ses-419!2sar!4v1722122687678!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer__text">
+                <div class="footer__logo">
+                    <img src="img/logo-footer.png" alt="Logotipo Medical Bio">
+                </div>
+                <p>Tu bienestar es nuestra prioridad. Únete a la experiencia Medical Bio.</p>
+                <h3>¡Síguenos en Instagram!</h3>
+                <a class="footer__instagram">
+                    <img src="img/instagram.png" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <div class="container__copyright">
+            <div class="copyright__text">
+                <p>© 2024 Medical Bio. Todos los derechos reservados.</p>
+            </div>
+            <div class="estelar">
+                <p>Diseño y desarrollo web</p>
+                <img src="img/estelar.png" alt="">
+            </div>
+        </div>
+        </section>
+        <script src="https://kit.fontawesome.com/27868a80f3.js" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
 </body>
 
 </html>

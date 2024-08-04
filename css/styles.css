@@ -1058,7 +1058,7 @@ SECCION CARRUSEL
     gap: 5rem;
     padding: 4rem;
     background-color: var(--primarioClaro);
-    background-image: url(../img/medical-bio-mendoza-plenitud.png);
+    background-image: url(../img/medical-bio-mendoza-plenitud.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1207,7 +1207,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--primarioOscuro);
 }
 .form__container {
-    background-image: url('../img/contacto-medical-bio.png');
+    background-image: url('../img/contacto-medical-bio.webp');
     width: 100%;
     height: 500px;
     background-position: right center;
